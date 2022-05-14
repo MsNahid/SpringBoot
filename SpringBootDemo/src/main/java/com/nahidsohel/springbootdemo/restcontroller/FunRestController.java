@@ -12,6 +12,7 @@ public class FunRestController {
 
     @Value("${coach.name}")
     private String coachName;
+
     @GetMapping("/")
     public String getHelloWorld(){
         return "Hello World..Hi everyone";
