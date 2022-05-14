@@ -16,3 +16,13 @@
   - No need to have Maven Installed or present in path
   - If correct version of Maven is NOT found
      - **Automatically downloads** correct version and runs maven
+
+<br />
+
+**Spring Boot Running From The Command Line** <hr />
+> - Build Jar File
+>    - ./**mvnw** package.
+> - Run App
+>     1. java -jar [.jar file name]
+>     2. ./**mvnw** spring-boot:run
+
