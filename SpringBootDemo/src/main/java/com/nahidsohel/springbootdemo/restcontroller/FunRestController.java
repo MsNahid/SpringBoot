@@ -15,7 +15,7 @@ public class FunRestController {
 
     @GetMapping("/")
     public String getHelloWorld(){
-        return "Hello World..Hi everyone";
+        return "Hello World..Hi everyone!!";
     }
 
     @GetMapping("/fortune")
