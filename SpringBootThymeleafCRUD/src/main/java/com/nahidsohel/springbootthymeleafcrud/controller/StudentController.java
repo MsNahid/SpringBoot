@@ -2,7 +2,6 @@ package com.nahidsohel.springbootthymeleafcrud.controller;
 
 
 import com.nahidsohel.springbootthymeleafcrud.Service.StudentService;
-import com.nahidsohel.springbootthymeleafcrud.entity.Employee;
 import com.nahidsohel.springbootthymeleafcrud.entity.Student;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class StudentController {
     private final StudentService studentService;
 
     @GetMapping("/list")
-    public String listEmployees(Model theModel) {
+    public String listStudents(Model theModel) {
 
         // get employees from db
         List<Student> studentList = studentService.findAll();
@@ -29,8 +28,22 @@ public class StudentController {
         // add to the spring model
         theModel.addAttribute("studentList", studentList);
 
+//        System.out.println(studentList.size());
+
         return "students/list-students";
     }
+
+    @GetMapping("/showFormForAdd")
+    public String showFormForAdd(Model theModel) {
+
+        // create model attribute to bind form data
+        Student student = new Student();
+
+        theModel.addAttribute("student", student);
+
+        return "students/student-form";
+    }
+
 
     @PostMapping("/showFormForUpdate")
     public String showFormForUpdate(@RequestParam("studentId") int theId,
