@@ -1,9 +1,9 @@
 package com.springboot.blog.entity;
 
+import jakarta.persistence.*;
 import lombok.Data;
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
-import javax.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 
